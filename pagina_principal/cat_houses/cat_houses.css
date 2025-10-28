@@ -33,7 +33,7 @@ header {
 }
 
 .logo img {
-    width:180px;
+    width: 180px;
     height: auto;
 }
 
@@ -71,16 +71,30 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
 }
 
+/* Container que mantém o vídeo na proporção 16:9 */
 .video-container {
-    display: flex;
-    justify-content: center;
-}
-
-.video-container iframe {
+    position: relative;
     width: 80%;
     max-width: 900px;
-    height: 300px;
-    /* Altura menor */
+    margin: 0 auto;
+    /* centraliza horizontalmente */
+    padding-bottom: 56.25%;
+    /* mantém proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+    /* fundo preto enquanto o vídeo carrega */
+}
+
+/* Ajuste do iframe dentro do container */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
     border-radius: 12px;
 }
 
