@@ -1,0 +1,95 @@
+/* CSS Central de Ajuda */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #111, #2e7d32);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid #c8a961;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #e1e1e1;
+}
+
+/* Conteúdo principal */
+.content {
+    background-color: var(--cinza-claro);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #2e7d32;
+}
+
+.container h2 {
+    text-align: center;
+    color: #234F25;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.faq h3 {
+    color: #000;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    border-left: 5px solid #c8a961;
+    padding-left: 10px;
+    font-size: 1.1rem;
+}
+
+.faq p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1rem;
+    color: #333;
+}
+
+i.fas {
+    color: #2e7d32;
+    margin-right: 7px;
+}
+
+.faq a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.faq a:hover {
+    color: #AD9C70;
+    transition: color 0.3s ease;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    border-top: 4px solid #2e7d32;
+}

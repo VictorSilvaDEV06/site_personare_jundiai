@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Personare</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="../imagens/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <h2 id="form-title">Login Personare</h2>
+
+        <form id="login-form">
+            <input type="text" id="login-id" placeholder="E-mail ou CPF" maxlength="14" required>
+
+            <div class="input-container">
+                <input type="password" id="senha" placeholder="Senha" required>
+                <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+            <button type="submit">Entrar</button>
+            <p>Não tem conta? <a href="cadastro.html" id="go-register">Cadastre-se</a></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Formatação CPF / E-mail
+        function formatarCPF(campo) {
+            let valor = campo.value.replace(/\D/g, "");
+            if (valor.length > 0) {
+                valor = valor.replace(/^(\d{3})(\d)/, "$1.$2");
+                valor = valor.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+                valor = valor.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})/, "$1.$2.$3-$4");
+            }
+            campo.value = valor;
+        }
+
+        function lidarComInput(campo) {
+            let valor = campo.value;
+            if (/[a-zA-Z]/.test(valor)) {
+                campo.removeAttribute('maxlength');
+            } else {
+                campo.setAttribute('maxlength', '14');
+                formatarCPF(campo);
+            }
+        }
+
+        const loginInput = document.getElementById('login-id');
+        if (loginInput) {
+            loginInput.addEventListener('input', function (e) {
+                lidarComInput(e.target);
+            });
+        }
+
+        // Olhinho da senha
+        const passwordInput = document.getElementById('senha');
+        const toggleIcon = document.getElementById('togglePassword');
+        if (passwordInput && toggleIcon) {
+            toggleIcon.addEventListener('click', function () {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+        }
+    </script>
+</body>
+
+</html>

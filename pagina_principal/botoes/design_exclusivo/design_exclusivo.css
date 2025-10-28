@@ -1,0 +1,298 @@
+/* CSS Design Exclusivo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.topo {
+    background: linear-gradient(135deg, #111, #2e7d32);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid #c8a961;
+}
+
+.topo h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.topo p {
+    font-size: 1.1em;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+}
+
+.texto {
+    flex: 1 1 450px;
+    padding-right: 30px;
+}
+
+.texto h2 {
+    color: #000;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    color: #000;
+    line-height: 1.6;
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.texto ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.texto ul li {
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.texto ul li::before {
+    content: "✓";
+    color: #2e7d32;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Botão */
+.botao-verde {
+    display: inline-block;
+    background-color: #234F25;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.botao-verde:hover {
+    background-color: #AD9C70;
+}
+
+/* Imagem lateral */
+.imagem img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* GALERIA  */
+
+.galeria {
+    background-color: white;
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.galeria h2 {
+    color: #234F25;
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Cada bloco da galeria */
+.projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Imagem */
+.projeto img {
+    width: 100%;
+    max-width: 300px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.projeto:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Legenda tipo botão */
+.legenda {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 20px;
+    background: linear-gradient(90deg, #234F25);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.projeto:hover .legenda {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsividade */
+
+/* Telas médias (tablets e notebooks menores) */
+@media (max-width: 992px) {
+    .imagens {
+        gap: 20px;
+    }
+
+    .projeto img {
+        max-width: 260px;
+        height: 180px;
+    }
+
+    .legenda {
+        font-size: 0.9rem;
+        padding: 7px 18px;
+    }
+}
+
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .imagens {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .projeto img {
+        width: 85%;
+        height: auto;
+    }
+
+    .legenda {
+        font-size: 1rem;
+        padding: 10px 25px;
+        border-radius: 30px;
+    }
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 4px solid #2e7d32;
+}
+
+/* =====================================================
+AJUSTES PARA O CARROSSEL (MODAL E IMAGEM)
+=====================================================
+*/
+
+/* Modal Carrossel (Ajustado) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    /* Adicionado para garantir que o modal não tenha scroll, se não for necessário */
+    overflow: hidden;
+}
+
+/* Conteúdo do Carrossel (Ajustado para Limitar a Área da Imagem) */
+.conteudo-carrossel {
+    /* Limita o container principal das imagens em relação ao tamanho da tela (viewport) */
+    max-width: 90%;
+    max-height: 90vh;
+    /* 90% da altura da tela */
+    position: relative;
+    /* Opcional: Se a imagem for menor, ela é centralizada pelo .modal */
+}
+
+/* Imagem dentro do Carrossel (Ajustado para Redimensionar) */
+.conteudo-carrossel img {
+    /* Garante que a imagem se ajuste ao container sem estourar */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    /* Limita a altura da imagem para que caiba na tela */
+    display: block;
+    /* Remove possíveis espaços extras abaixo da imagem */
+    border-radius: 8px;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}

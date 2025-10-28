@@ -1,0 +1,200 @@
+/* ====== CONFIGURAÇÕES GERAIS ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000;
+    zoom: 95%;
+}
+
+/* ====== TIPOGRAFIA ====== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5em;
+}
+
+/* ====== CABEÇALHO ====== */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(350deg, #111, #2e7d32);
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: 3px solid #AD9C70;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* Menu centralizado */
+.menu-central {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-right: 240px;
+}
+
+.menu-central ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-central ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* Mais forte, parecido com negrito */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu-central ul li a:hover {
+    color: #AD9C70;
+    transition: color 0.3s ease;
+    /* Dourado */
+}
+
+/* ====== SEÇÃO DE NOVIDADES ====== */
+.novidades-section {
+    padding: 20px 0 80px;
+    /* Título próximo do header */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.container-novidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.titulo-novidades {
+    color: #2e7d32;
+    font-size: 2em;
+    margin-bottom: 5px;
+    /* Mais próximo do header */
+}
+
+.descricao-novidades {
+    color: #000;
+    font-size: 1.15em;
+    margin-bottom: 50px;
+    /* Espaço antes dos cards */
+}
+
+.cards-novidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* Espaçamento profissional */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card-novidade {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-novidade:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card-novidade img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.conteudo-card {
+    padding: 20px;
+    text-align: left;
+}
+
+.conteudo-card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.conteudo-card p {
+    color: #000;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.btn-novidade {
+    display: inline-block;
+    background-color: #234F25;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-novidade:hover {
+    background-color: #AD9C70;
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0 10px;
+    position: relative;
+    margin-top: 50px;
+    border-top: 4px solid #2e7d32;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .menu-central {
+        width: 100%;
+    }
+
+    .menu-central ul {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .titulo-novidades {
+        font-size: 1.7rem;
+    }
+
+    .conteudo-card h3 {
+        font-size: 1.1rem;
+    }
+}

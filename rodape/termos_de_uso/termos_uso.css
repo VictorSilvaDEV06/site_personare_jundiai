@@ -1,0 +1,127 @@
+/* CSS Termos de Uso */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    zoom: 90%;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #111, #2e7d32);
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+    border-bottom: 4px solid #c8a961;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.header p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    color: #e1e1e1;
+}
+
+/* Conteúdo principal */
+.content {
+    background-color: #f5f5f5;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 950px;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-top: 5px solid #2e7d32;
+}
+
+.container h2 {
+    text-align: center;
+    color: #234F25;
+    margin-bottom: 35px;
+    font-size: 2rem;
+}
+
+/* Seções dos Termos */
+.faq h3 {
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-left: 6px solid #c8a961;
+    padding-left: 14px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faq p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+i.fas {
+    color: #2e7d32;
+    margin-right: 5px;
+}
+
+.faq a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.faq a:hover {
+    color: #AD9C70;
+    transition: color 0.3s ease;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95rem;
+    border-top: 4px solid #2e7d32;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .container h2 {
+        font-size: 1.6rem;
+    }
+
+    .faq h3 {
+        font-size: 1.1rem;
+    }
+}

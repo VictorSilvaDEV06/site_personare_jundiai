@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Exclusivo Personare</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="design_exclusivo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Design Exclusivo</h1>
+        <p>Projetos sob medida que refletem seu estilo e transformam seu espaço.</p>
+    </header>
+
+    <section class="conteudo">
+        <div class="texto">
+            <h2>O design certo para o seu ambiente</h2>
+            <p>
+                Cada projeto Personare é único. Nosso time de especialistas cria soluções exclusivas
+                que unem estética, funcionalidade e o seu gosto pessoal. O resultado é um ambiente
+                planejado com perfeição e pensado em cada detalhe.
+            </p>
+
+            <ul>
+                <li>Criação de projetos 100% personalizados</li>
+                <li>Renderizações realistas em 3D</li>
+                <li>Atendimento individualizado com designer especializado</li>
+            </ul>
+
+            <a href="../../../rodape/projetos_e_orcamentos/projetos_orcamentos.html" class="botao-verde">Solicitar meu
+                projeto</a>
+        </div>
+
+        <div class="imagem">
+            <img src="../../../imagens/logo_personare_parede.jpeg" alt="Design exclusivo Personare">
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h2>Projetos que Inspiram</h2>
+        <div class="imagens">
+            <div class="projeto" onclick="abrirCarrossel('cozinha')">
+                <img src="../../../imagens/area_gourmet/projeto_cozinha_azul (1).jpeg" alt="Área Gourmet">
+                <span class="legenda">Área Gourmet</span>
+            </div>
+
+            <div class="projeto" onclick="abrirCarrossel('quarto')">
+                <img src="../../../imagens/quarto_planejado/quarto_planejado.jpeg" alt="Quarto planejado">
+                <span class="legenda">Quarto Planejado</span>
+            </div>
+
+            <div class="projeto" onclick="abrirCarrossel('sala')">
+                <img src="../../../imagens/sala_planejada/sala_planejada 10.jpeg" alt="Sala planejada">
+                <span class="legenda">Sala Planejada</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="modalCarrossel" class="modal">
+        <span class="fechar" onclick="fecharCarrossel()">&times;</span>
+        <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
+        <div class="conteudo-carrossel">
+            <img id="imagemCarrossel" src="" alt="">
+        </div>
+        <button class="next" onclick="mudarImagem(1)">&#10095;</button>
+    </div>
+
+    <footer class="rodape">
+        <p>© 2025 Personare Móveis Planejados — Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const imagensProjetos = {
+            // COZINHA: 5 posições e CAMINHO CORRIGIDO (3x '../')
+            cozinha: [
+                '../../../imagens/area_gourmet/projeto_cozinha_azul (1).jpeg', // Imagem 1: (Capa)
+                '../../../imagens/area_gourmet/projeto_cozinha_azul (2).jpeg', // Imagem 2:
+                '../../../imagens/area_gourmet/projeto_cozinha_azul (3).jpeg', // Imagem 3:
+                '../../../imagens/area_gourmet/projeto_cozinha_azul (4).jpeg', // Imagem 4:
+                '../../../imagens/area_gourmet/projeto_cozinha_azul (5).jpeg'  // Imagem 5:
+            ],
+            // QUARTO: CAMINHO CORRIGIDO (3x '../'). Preencher com os nomes exatos!
+            quarto: [
+                '../../../imagens/quarto_planejado/quarto_planejado.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 2.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 3.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 4.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 5.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 6.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 7.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 8.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 9.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 10.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 11.jpeg', 
+                '../../../imagens/quarto_planejado/quarto_planejado 12.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 13.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 14.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 15.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 16.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 17.jpeg',
+                '../../../imagens/quarto_planejado/quarto_planejado 18.jpeg',
+            ],
+            // SALA: CAMINHO CORRIGIDO (3x '../'). Preencher com os nomes exatos!
+            sala: [
+                '../../../imagens/sala_planejada/sala_planejada.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 2.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 3.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 4.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 6.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 7.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 8.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 9.jpeg',
+                '../../../imagens/sala_planejada/sala_planejada 10.jpeg'
+            ]
+        };
+
+        let projetoAtual = '';
+        let indiceImagem = 0;
+
+        // NOVO: Função para lidar com a navegação do teclado
+        function navegarTeclado(event) {
+            // Verifica se o modal está aberto (apenas para garantir)
+            if (document.getElementById('modalCarrossel').style.display !== 'flex') {
+                return;
+            }
+
+            // 37 = Seta para a Esquerda
+            if (event.keyCode === 37) {
+                mudarImagem(-1);
+            }
+            // 39 = Seta para a Direita
+            else if (event.keyCode === 39) {
+                mudarImagem(1);
+            }
+            // 27 = Tecla ESC (para fechar o modal)
+            else if (event.keyCode === 27) {
+                fecharCarrossel();
+            }
+        }
+
+        function abrirCarrossel(projeto) {
+            projetoAtual = projeto;
+            indiceImagem = 0;
+            document.getElementById('imagemCarrossel').src = imagensProjetos[projeto][indiceImagem];
+            document.getElementById('modalCarrossel').style.display = 'flex';
+
+            // CORREÇÃO DO SCROLL: Impede o scroll no corpo da página (fundo)
+            document.body.style.overflow = 'hidden';
+
+            // NOVO: Adiciona o listener para detectar as teclas
+            document.addEventListener('keydown', navegarTeclado);
+        }
+
+        function fecharCarrossel() {
+            document.getElementById('modalCarrossel').style.display = 'none';
+
+            // CORREÇÃO DO SCROLL: Restaura o scroll no corpo da página
+            document.body.style.overflow = 'auto';
+
+            // NOVO: Remove o listener do teclado (boa prática)
+            document.removeEventListener('keydown', navegarTeclado);
+        }
+
+        function mudarImagem(direcao) {
+            const imagens = imagensProjetos[projetoAtual];
+            indiceImagem += direcao;
+            if (indiceImagem < 0) indiceImagem = imagens.length - 1;
+            if (indiceImagem >= imagens.length) indiceImagem = 0;
+            document.getElementById('imagemCarrossel').src = imagens[indiceImagem];
+        }
+    </script>
+</body>
+
+</html>

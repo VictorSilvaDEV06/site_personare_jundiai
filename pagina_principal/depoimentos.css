@@ -1,0 +1,108 @@
+/* CSS Depoimentos */
+.depoimentos {
+    background: #ffffff;
+    padding: 50px 20px 30px;
+}
+
+.container-depo {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.depo-title {
+    color: #234F25;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.texto {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 14px;
+    max-width: 760px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.autor {
+    color: #AD9C70;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Setas */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    background: #234F25;
+    color: #ffffff;
+    border: none;
+    font-size: 1.9rem;
+    padding: 14px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 40;
+    pointer-events: auto;
+    transition: transform 0.25s ease, background 0.2s;
+}
+
+.seta:hover {
+    transform: translateY(calc(-100% - 5px)) scale(1.05);
+    background: #2f6830;
+}
+
+.seta-esquerda {
+    left: 40px;
+}
+
+.seta-direita {
+    right: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .seta {
+        font-size: 1.2rem;
+        padding: 10px;
+        left: 8px;
+        right: 8px;
+    }
+
+    .texto {
+        font-size: 1rem;
+        padding: 0 12px;
+    }
+}

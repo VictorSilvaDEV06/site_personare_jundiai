@@ -1,0 +1,228 @@
+:root {
+    --radius: 12px;
+    --pad: 24px;
+    --verde-escuro: #1b5e20;
+    --verde-claro: #2e7d32;
+    --preto: #000;
+    --preto-escuro: #000000;
+    --dourado: #c8a961;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--preto);
+}
+
+body {
+    background: #f9f9f9;
+    zoom: 90%;
+}
+
+/* ==================== ESTRUTURA ==================== */
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+.card {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* ==================== CABEÇALHO ==================== */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px var(--pad);
+    border-bottom: 3.5px solid var(--dourado);
+    background: linear-gradient(90deg, #1a1a1a, #2e7d32);
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-claro));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Título e subtítulo do cabeçalho */
+header h1 {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+header p.muted {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+/* ==================== CONTEÚDO ==================== */
+main {
+    padding: 24px;
+    line-height: 1.7;
+}
+
+/* Títulos das seções (números e texto em verde-claro) */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: var(--verde-claro);
+    font-weight: 700;
+}
+
+/* Parágrafos gerais */
+p {
+    margin: 10px 0;
+    color: var(--preto);
+}
+
+/* Parágrafo inicial (muted no HTML) */
+main>p.muted {
+    color: var(--preto);
+}
+
+/* Negrito de Personare e da Lei */
+strong {
+    color: var(--preto-escuro);
+    font-weight: 700;
+}
+
+/* Listas e itens */
+ul {
+    margin: 10px 0 10px 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    color: var(--preto);
+}
+
+ul li::marker {
+    color: var(--verde-claro);
+}
+
+/* Links de e-mail */
+a[href^="mailto:"] {
+    text-decoration: none;
+    color: var(--verde-claro);
+}
+
+/* ==================== TOC ==================== */
+.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 20px;
+}
+
+/* Botões enumerados (navegação) */
+.toc a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--preto);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.toc a:hover {
+    color: var(--verde-escuro);
+    background: rgba(27, 94, 32, 0.1);
+}
+
+/* ==================== RODAPÉ ==================== */
+footer {
+    padding: 16px var(--pad);
+    border-top: 1px solid var(--preto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+}
+
+footer .muted {
+    color: var(--preto);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ==================== BOTÕES ==================== */
+.btn {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Botões principais */
+.btn.primary {
+    background: var(--verde-escuro);
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background: var(--verde-claro);
+}
+
+/* Botões secundários */
+.btn.secondary {
+    background: transparent;
+    color: var(--preto);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn.secondary:hover {
+    color: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+}
+
+/* ==================== RESPONSIVO ==================== */
+@media (max-width: 520px) {
+    .card {
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
