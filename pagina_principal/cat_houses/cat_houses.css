@@ -1,7 +1,7 @@
 :root {
     --verde-escuro: #1b5e20;
     --verde-claro: #2e7d32;
-    --dourado: #c8a951;
+    --dourado: #AD9C70;
     --branco: #ffffff;
     --preto: #000;
 }
@@ -78,7 +78,7 @@ nav a:hover {
     max-width: 900px;
     margin: 0 auto;
     /* centraliza horizontalmente */
-    padding-bottom: 56.25%;
+    padding-bottom: 32%;
     /* mantém proporção 16:9 */
     height: 0;
     overflow: hidden;
@@ -100,7 +100,7 @@ nav a:hover {
 
 .video-description {
     font-size: 1.2em;
-    color: var(--verde-claro);
+    color: var(--preto);
     margin-bottom: 25px;
 font-family: 'Roboto', sans-serif;
 }
