@@ -212,6 +212,12 @@ h6 {
     line-height: 1.4;
 }
 
+/* Adicione este código no final do seu arquivo styles.css ou próximo ao .hero-subtitle */
+.subtitle-cta-gap {
+    margin-bottom: 2.5rem;
+    /* Tente 2.5rem (o dobro do que você tentou) */
+}
+
 .cta-button {
     background-color: #ffffff;
     color: #234F25;
@@ -225,6 +231,7 @@ h6 {
     cursor: pointer;
     border-radius: 6px;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .cta-button:hover {
