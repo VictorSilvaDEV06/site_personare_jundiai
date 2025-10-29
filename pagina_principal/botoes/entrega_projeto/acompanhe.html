@@ -4,37 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acompanhe Seu Projeto Personare Móveis Planejados</title>
-
-    <!-- Fontes Personare -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS separado -->
+    <title>Acompanhe Seu Projeto Personare</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="acompanhe.css">
 </head>
 
 <body>
-    <header class="header-personare">
-        <div class="logo">
-            <img src="img/logo_personare.png" alt="Personare Móveis Planejados">
-        </div>
-        <nav class="menu">
-            <a href="index.html">Início</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+    <header class="header">
+        <h1>Acompanhe Seu Projeto</h1>
+        <p>Insira seu código e veja o status do seu projeto conosco.</p>
     </header>
 
-    <main class="container-rastreio">
-        <h2>Acompanhe Seu Projeto</h2>
-        <input type="text" id="codigoRastreio" placeholder="Digite seu Código de Rastreio (Ex: PERSONARE001)">
-        <button onclick="buscarStatus()">Buscar Status</button>
+    <main class="content">
+        <section class="container">
+            <h2>Status do Projeto</h2>
+            <p>Digite o código fornecido do seu projeto para acompanhar cada etapa do processo.</p>
 
-        <div id="resultadoStatus"></div>
+            <div class="form-section">
+                <input type="text" id="codigoRastreio" placeholder="Ex: PERSONARE001">
+                <button onclick="buscarStatus()">Buscar Status</button>
+            </div>
+
+            <div id="resultadoStatus"></div>
+        </section>
     </main>
 
-    <!-- Scripts -->
+    <footer class="footer">
+        <p>&copy; 2025 Personare Móveis Planejados. Todos os direitos reservados.</p>
+    </footer>
+
     <script src="dados_projetos.js"></script>
     <script src="funcoes_rastreio.js"></script>
 </body>

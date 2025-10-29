@@ -1,110 +1,101 @@
-/* === Variáveis de cores e fontes Personare === */
-:root {
-    --verde-escuro: #1b5e20;
-    --verde-claro: #2e7d32;
-    --dourado: #d4af37;
-    --cinza-claro: #f4f4f4;
-    --cinza-medio: #e0e0e0;
-    --preto: #000000;
-    --branco: #ffffff;
-
-    --font-titulo: 'Playfair Display', serif;
-    --font-corpo: 'Roboto', sans-serif;
-}
-
-/* === Reset básico === */
+/* === Reset e fontes === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-corpo);
-    background-color: var(--cinza-claro);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 /* === Header === */
-.header-personare {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: var(--verde-escuro);
-}
-
-.header-personare .logo img {
-    height: 50px;
-}
-
-.header-personare .menu a {
-    color: var(--branco);
-    font-weight: 500;
-    margin-left: 30px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.header-personare .menu a:hover {
-    color: var(--dourado);
-}
-
-/* === Container de rastreio === */
-.container-rastreio {
-    background-color: var(--branco);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 40px;
-}
-
-.container-rastreio h2 {
-    font-family: var(--font-titulo);
-    color: var(--verde-escuro);
+.header {
+    background: linear-gradient(135deg, #111, #2e7d32);
+    color: #ffffff;
     text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid #AD9C70;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* === Conteúdo principal === */
+.content {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #2e7d32;
+}
+
+.container h2 {
+    text-align: center;
+    color: #2e7d32;
     margin-bottom: 25px;
-    font-size: 28px;
+    font-size: 1.8rem;
 }
 
-.container-rastreio input[type="text"] {
-    width: 100%;
+.container p {
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* === Formulário de rastreio === */
+.form-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-section input {
     padding: 12px;
-    border: 1px solid var(--cinza-medio);
+    border: 1px solid #ccc;
     border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.container-rastreio button {
-    width: 100%;
+.form-section input:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+.form-section button {
     padding: 12px;
-    background-color: var(--verde-claro);
-    color: var(--branco);
+    background-color: #234F25;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
-    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
 }
 
-.container-rastreio button:hover {
-    background-color: var(--verde-escuro);
+.form-section button:hover {
+    background-color: #2e7d32;
 }
 
-/* === Área de resultado === */
+/* === Resultado do status === */
 #resultadoStatus {
     margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
 }
 
 .status-box {
@@ -112,12 +103,12 @@ body {
     padding: 20px;
     margin-top: 15px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
 }
 
 .progresso-barra {
     width: 100%;
-    background-color: var(--cinza-medio);
+    background-color: #e0e0e0;
     border-radius: 6px;
     margin: 15px 0;
     height: 30px;
@@ -126,10 +117,10 @@ body {
 
 .barra-interna {
     height: 100%;
-    background-color: var(--verde-claro);
+    background-color: #2e7d32;
     text-align: center;
     line-height: 30px;
-    color: var(--branco);
+    color: #ffffff;
     font-weight: bold;
     transition: width 0.5s;
 }
@@ -138,6 +129,16 @@ body {
     font-style: italic;
     color: #555;
     margin-top: 15px;
-    border-left: 3px solid var(--verde-claro);
+    border-left: 5px solid #2e7d32;
     padding-left: 10px;
+}
+
+/* === Footer === */
+.footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    border-top: 4px solid #2e7d32;
 }
