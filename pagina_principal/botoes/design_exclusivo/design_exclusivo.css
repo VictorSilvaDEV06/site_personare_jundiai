@@ -57,6 +57,7 @@
 .texto ul {
     list-style: none;
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .texto ul li {
