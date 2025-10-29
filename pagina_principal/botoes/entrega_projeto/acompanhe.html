@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhe Seu Projeto - Personare Móveis Planejados</title>
+
+    <!-- Fontes Personare -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS separado -->
+    <link rel="stylesheet" href="acompanhamento.css">
+</head>
+
+<body>
+    <header class="header-personare">
+        <div class="logo">
+            <img src="img/logo_personare.png" alt="Personare Móveis Planejados">
+        </div>
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="container-rastreio">
+        <h2>Acompanhe Seu Projeto</h2>
+        <input type="text" id="codigoRastreio" placeholder="Digite seu Código de Rastreio (Ex: PERSONARE001)">
+        <button onclick="buscarStatus()">Buscar Status</button>
+
+        <div id="resultadoStatus"></div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="dados_projetos.js"></script>
+    <script src="funcoes_rastreio.js"></script>
+</body>
+
+</html>

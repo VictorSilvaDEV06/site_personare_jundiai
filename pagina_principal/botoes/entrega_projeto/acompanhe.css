@@ -1,0 +1,143 @@
+/* === Variáveis de cores e fontes Personare === */
+:root {
+    --verde-escuro: #1b5e20;
+    --verde-claro: #2e7d32;
+    --dourado: #d4af37;
+    --cinza-claro: #f4f4f4;
+    --cinza-medio: #e0e0e0;
+    --preto: #000000;
+    --branco: #ffffff;
+
+    --font-titulo: 'Playfair Display', serif;
+    --font-corpo: 'Roboto', sans-serif;
+}
+
+/* === Reset básico === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-corpo);
+    background-color: var(--cinza-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+/* === Header === */
+.header-personare {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--verde-escuro);
+}
+
+.header-personare .logo img {
+    height: 50px;
+}
+
+.header-personare .menu a {
+    color: var(--branco);
+    font-weight: 500;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.header-personare .menu a:hover {
+    color: var(--dourado);
+}
+
+/* === Container de rastreio === */
+.container-rastreio {
+    background-color: var(--branco);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.container-rastreio h2 {
+    font-family: var(--font-titulo);
+    color: var(--verde-escuro);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.container-rastreio input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.container-rastreio button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--verde-claro);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container-rastreio button:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* === Área de resultado === */
+#resultadoStatus {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.status-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.progresso-barra {
+    width: 100%;
+    background-color: var(--cinza-medio);
+    border-radius: 6px;
+    margin: 15px 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+.barra-interna {
+    height: 100%;
+    background-color: var(--verde-claro);
+    text-align: center;
+    line-height: 30px;
+    color: var(--branco);
+    font-weight: bold;
+    transition: width 0.5s;
+}
+
+.detalhes-status {
+    font-style: italic;
+    color: #555;
+    margin-top: 15px;
+    border-left: 3px solid var(--verde-claro);
+    padding-left: 10px;
+}

@@ -14,7 +14,7 @@
 
 body {
     background-color: var(--branco);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--preto);
 }
 
@@ -47,7 +47,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--branco);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     font-family: 'Playfair Display', serif;
     transition: color 0.3s ease;
