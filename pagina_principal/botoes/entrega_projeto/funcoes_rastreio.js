@@ -206,5 +206,5 @@ function renderSemiCircles(faseAtual) {
     wrapper.style.maxWidth = `${MAX_WIDTH}px`;
     wrapper.style.margin = '18px auto';
     // O overflow pode ser mantido, mas não será mais necessário para o texto
-    wrapper.style.overflow = 'visible'
+    wrapper.style.overflow = 'visible';
 }
