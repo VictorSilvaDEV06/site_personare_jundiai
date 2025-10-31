@@ -1,6 +1,4 @@
-// =======================================================
-// ARQUIVO: dados_projetos.js
-// =======================================================
+// dados_projetos.js
 const DADOS_RASTREIO = {
     "PERSONARE001": {
         cliente: "Maria Silva",

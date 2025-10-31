@@ -98,7 +98,7 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* GALERIA  */
+/* GALERIA */
 
 .galeria {
     background-color: white;
@@ -167,7 +167,6 @@
 
 /* Responsividade */
 
-/* Telas médias (tablets e notebooks menores) */
 @media (max-width: 992px) {
     .imagens {
         gap: 20px;
@@ -214,12 +213,7 @@
     border-top: 4px solid #2e7d32;
 }
 
-/* =====================================================
-AJUSTES PARA O CARROSSEL (MODAL E IMAGEM)
-=====================================================
-*/
-
-/* Modal Carrossel (Ajustado) */
+/* Modal Carrossel */
 .modal {
     display: none;
     position: fixed;
@@ -231,30 +225,23 @@ AJUSTES PARA O CARROSSEL (MODAL E IMAGEM)
     background-color: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
-    /* Adicionado para garantir que o modal não tenha scroll, se não for necessário */
     overflow: hidden;
 }
 
-/* Conteúdo do Carrossel (Ajustado para Limitar a Área da Imagem) */
+/* Conteúdo do Carrossel */
 .conteudo-carrossel {
-    /* Limita o container principal das imagens em relação ao tamanho da tela (viewport) */
     max-width: 90%;
     max-height: 90vh;
-    /* 90% da altura da tela */
     position: relative;
-    /* Opcional: Se a imagem for menor, ela é centralizada pelo .modal */
 }
 
-/* Imagem dentro do Carrossel (Ajustado para Redimensionar) */
+/* Imagem dentro do Carrossel */
 .conteudo-carrossel img {
-    /* Garante que a imagem se ajuste ao container sem estourar */
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 90vh;
-    /* Limita a altura da imagem para que caiba na tela */
     display: block;
-    /* Remove possíveis espaços extras abaixo da imagem */
     border-radius: 8px;
 }
 

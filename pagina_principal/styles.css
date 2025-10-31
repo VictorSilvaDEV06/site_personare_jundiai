@@ -80,7 +80,6 @@ h6 {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
-    /* Transição para os links de navegação principais */
     transition: color 0.3s ease;
 }
 
@@ -104,18 +103,16 @@ h6 {
     color: #AD9C70;
 }
 
-/* **DROPDOWN RESIDENCIAIS (Com transição suave)** */
+/* DROPDOWN RESIDENCIAIS */
 .dropdown-menu {
     position: relative;
     padding-bottom: 5px;
 }
 
 .dropdown-content {
-    /* MUDANÇA 1: Adiciona transições de opacidade e visibilidade */
     transition: opacity 0.3s ease, visibility 0.3s ease;
 
     display: block;
-    /* Mantemos 'display: none' por padrão */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -128,15 +125,12 @@ h6 {
     z-index: 1001;
     border: 1px solid #000;
     opacity: 0;
-    /* Começa invisível (opacidade 0) */
     visibility: hidden;
-    /* Começa escondido */
 }
 
 .dropdown-menu:hover .dropdown-content {
     display: block;
     opacity: 1;
-    /* Transição para opacidade 1 (aparece suavemente) */
     visibility: visible;
 }
 
@@ -148,8 +142,6 @@ h6 {
     text-align: left;
     white-space: nowrap;
     font-weight: 400;
-
-    /* MUDANÇA 2: Transição suave para cores de hover nos links internos */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -159,7 +151,7 @@ h6 {
     border-radius: 4px;
 }
 
-/* **FIM DROPDOWN RESIDENCIAIS** */
+/* FIM DROPDOWN RESIDENCIAIS */
 
 
 /* HERO */
@@ -212,10 +204,8 @@ h6 {
     line-height: 1.4;
 }
 
-/* Adicione este código no final do seu arquivo styles.css ou próximo ao .hero-subtitle */
 .subtitle-cta-gap {
     margin-bottom: 2.5rem;
-    /* Tente 2.5rem (o dobro do que você tentou) */
 }
 
 .cta-button {
@@ -299,27 +289,19 @@ h6 {
 
 .carousel-container {
     position: relative;
-    /* width: 90%; */
-    /* max-width: 1000px; */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 0px;
     border-bottom: #234F25 10px solid;
-
-    /* 1. MUDANÇA: DEFINE A ALTURA MÁXIMA PARA O RETÂNGULO */
     max-height: 85vh;
-    /* Altere este valor para a altura desejada em pixels */
     width: 100%;
-    /* Garantir 100% de largura */
 }
 
 .carousel-slide {
     display: flex;
     transition: transform 0.6s ease-in-out;
     height: 80vh;
-    /* NOVO: Impede que o slide flex encolha ou cresça além do necessário */
     flex: 0 0 auto;
-    /* Garantir que o slide tem a altura do container */
 }
 
 .carousel-slide img {
@@ -328,15 +310,8 @@ h6 {
     flex-shrink: 0;
     border-radius: 0px;
     height: 100%;
-
-    /* REMOVIDO: display: block; e min-width: 0 (da Tentativa 2) para simplificar */
-
-    /* Garantir que a imagem preenche a altura do slide */
     object-fit: cover;
-
-    /* REAJUSTE DO FOCO: Voltando ao foco centralizado (50% de altura) para a parte do meio */
     object-position: center 70%;
-    /* Equivalente a 50% 50% */
 }
 
 .carousel-wrapper {
@@ -632,11 +607,6 @@ h6 {
         width: 100%;
     }
 
-    /* 3. MUDANÇA: Remover a regra de 80% para garantir 100% da largura da tela */
-    /* .carousel-slide img {
-        width: 80%;
-    } */
-
     /* OCULTAR DROPDOWN EM TELAS PEQUENAS (ou usar um menu mobile) */
     .dropdown-content {
         position: static;
@@ -647,7 +617,6 @@ h6 {
         border-radius: 0;
         box-shadow: none;
         background-color: #1c3d1e;
-        /* Um pouco mais escuro para diferenciar do nav principal */
     }
 }
 

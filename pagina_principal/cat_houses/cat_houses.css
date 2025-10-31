@@ -18,7 +18,7 @@ body {
     color: var(--preto);
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@ nav a:hover {
     color: #AD9C70;
 }
 
-/* ===== SEÇÃO VÍDEO ===== */
+/* SEÇÃO VÍDEO */
 .video-section {
     text-align: center;
     padding: 50px 20px 30px;
@@ -71,20 +71,16 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
 }
 
-/* Container que mantém o vídeo na proporção 16:9 */
 .video-container {
     position: relative;
     width: 80%;
     max-width: 900px;
     margin: 0 auto;
-    /* centraliza horizontalmente */
     padding-bottom: 32%;
-    /* mantém proporção 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 12px;
     background-color: #000;
-    /* fundo preto enquanto o vídeo carrega */
 }
 
 /* Ajuste do iframe dentro do container */
@@ -105,7 +101,7 @@ nav a:hover {
     font-family: 'Roboto', sans-serif;
 }
 
-/* ===== GALERIA ===== */
+/* GALERIA */
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -126,7 +122,7 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== BOTÃO VOLTAR AO TOPO ===== */
+/* BOTÃO VOLTAR AO TOPO */
 #topBtn {
     display: none;
     position: fixed;
@@ -148,7 +144,7 @@ nav a:hover {
     background-color: #AD9C70;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 25px;
@@ -160,7 +156,7 @@ footer {
     border-top: #2e7d32 4px solid;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     nav ul {
         gap: 20px;
@@ -169,7 +165,6 @@ footer {
     .video-container iframe {
         width: 100%;
         height: 200px;
-        /* Altura ainda menor para celular */
     }
 
     .galeria {

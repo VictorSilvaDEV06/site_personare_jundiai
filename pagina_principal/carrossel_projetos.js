@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     slideContainer.appendChild(firstClone);
     slideContainer.insertBefore(lastClone, slideContainer.firstChild);
 
-    // Ajuste: considerar largura real do slide (50%)
-    const slideWidthPercent = 50 + 50; // 50% da largura
+    // Ajuste: considerar largura real do slide
+    const slideWidthPercent = 50 + 50;
     slideContainer.style.transform = `translateX(-${slideWidthPercent}%)`; // iniciar no primeiro verdadeiro
 
     const showSlide = (i) => {

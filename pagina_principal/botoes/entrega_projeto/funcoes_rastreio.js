@@ -1,8 +1,6 @@
-// =======================================================
-// ARQUIVO: funcoes_rastreio.js - CORRIGIDO (V5 com Cores e Legenda CSS)
-// =======================================================
+// Funcoes_rastreio.js
 
-/* Fases e cores (fixas) */
+/* Fases e cores */
 const fases = [
     "Projeto Aprovado / Contrato Assinado",
     "Compra dos Materiais em Andamento",
@@ -25,7 +23,7 @@ const coresFases = [
     "#2e7d32"  // 8 - verde escuro
 ];
 
-/* Classes de cores (para o CSS customizado) */
+/* Classes de cores */
 const coresFasesClasses = [
     "indicator-fase-1",
     "indicator-fase-2",
@@ -49,7 +47,6 @@ function buscarStatus() {
     const resultadoDiv = document.getElementById('resultadoStatus');
     resultadoDiv.innerHTML = '';
 
-    // ATENÇÃO: DADOS_RASTREIO deve ser um objeto definido em outro lugar, como um JSON embutido no HTML
     const projeto = DADOS_RASTREIO[codigoInput];
 
     if (projeto) {
@@ -58,8 +55,6 @@ function buscarStatus() {
         // Gera a legenda de cores e fases em HTML
         const legendaHtml = gerarLegendaHtml();
 
-        // RÓTULOS E VALORES CORRIGIDOS: Adicionando <span class="project-value">
-        // ao redor dos valores dinâmicos para aplicar a cor #AD9C70 via CSS.
         let htmlContent = `
             <h3>Detalhes do Projeto: <span class="project-value">${codigoInput}</span></h3>
             <h4>Cliente: <span class="project-value">${projeto.cliente}</span></h4>
@@ -90,7 +85,6 @@ function buscarStatus() {
     }
 }
 
-/* Geração da legenda de cores em HTML (AJUSTADA PARA USAR AS CLASSES CSS) */
 function gerarLegendaHtml() {
     let html = `
         <div class="timeline-legend">
@@ -99,7 +93,6 @@ function gerarLegendaHtml() {
     `;
 
     fases.forEach((fase, index) => {
-        // Usa a classe CSS para a cor da bolinha
         const classeCor = coresFasesClasses[index];
 
         html += `
@@ -118,7 +111,7 @@ function gerarLegendaHtml() {
 }
 
 
-/* Desenha SVG com 8 meias-luas alternadas dentro de .svg-timeline-wrapper */
+/* Desenha SVG com 8 meias-luas alternadas */
 function renderSemiCircles(faseAtual) {
     const wrapper = document.querySelector('.svg-timeline-wrapper');
     if (!wrapper) return;
@@ -134,7 +127,7 @@ function renderSemiCircles(faseAtual) {
     const strokeWidth = 22;
     const controlFactor = 1.6;
 
-    // Altura é ajustada para acomodar apenas o gráfico e a porcentagem (sem os rótulos longos)
+    // Altura é ajustada para acomodar apenas o gráfico e a porcentagem
     const svgHeight = 2 * arcRadius + strokeWidth + 40;
 
     // cálculo da largura
@@ -196,8 +189,6 @@ function renderSemiCircles(faseAtual) {
         text.textContent = `${perc}%`;
         text.setAttribute('fill', ativo ? cor : '#9a9a9a');
         svg.appendChild(text);
-
-        // *** RÓTULOS DAS FASES (FRASES) FORAM REMOVIDOS DAQUI ***
     }
 
     // inserir SVG no wrapper
@@ -205,6 +196,5 @@ function renderSemiCircles(faseAtual) {
 
     wrapper.style.maxWidth = `${MAX_WIDTH}px`;
     wrapper.style.margin = '18px auto';
-    // O overflow pode ser mantido, mas não será mais necessário para o texto
     wrapper.style.overflow = 'visible';
 }

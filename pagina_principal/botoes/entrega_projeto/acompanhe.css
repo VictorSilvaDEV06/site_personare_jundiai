@@ -1,6 +1,6 @@
-/* === acompanhe.css - Versão Corrigida com Legenda da Timeline === */
+/* acompanhe.css */
 
-/* === Reset e fontes === */
+/* Reset e fontes */
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +8,9 @@
     font-family: "Poppins", Arial, sans-serif;
 }
 
-/* === Header === */
+/* Header */
 .header {
-    /* Ajuste no gradiente (cor inicial mais escura) para melhor contraste */
-    background: linear-gradient(135deg, #234F25, #2e7d32);
+    background: linear-gradient(135deg, #111, #234F25, #2e7d32);
     color: #ffffff;
     text-align: center;
     padding: 60px 20px;
@@ -30,7 +29,7 @@
     color: #ffffff;
 }
 
-/* === Conteúdo principal === */
+/* Conteúdo principal */
 .content {
     background-color: #f9f9f9;
     padding: 60px 20px;
@@ -43,12 +42,11 @@
     background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    /* Sombra da caixa aprimorada */
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
     border-top: 5px solid #2e7d32;
 }
 
-/* H2 Padrão */
+/* H2 */
 .container h2 {
     text-align: center;
     color: #2e7d32;
@@ -56,25 +54,21 @@
     font-size: 1.8rem;
 }
 
-/* H3 (Detalhes do Projeto:) - Rótulo #2e7d32 */
+/* H3 (Detalhes do Projeto:) */
 .container h3 {
     color: #000;
-    /* Cor de rótulo (Detalhes do Projeto:) */
     margin-bottom: 5px;
     font-size: 1.5rem;
 }
 
-/* H4 (Cliente: Maria Silva) - Rótulo/Valor */
+/* H4 (Cliente Rótulo/Valor */
 .container h4 {
-    /* Cor de rótulo (Cliente:) */
     color: #000;
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-/* Nova classe para os valores dinâmicos do projeto (PERSONARE001, Maria Silva) - #AD9C70 */
-/* Esta classe deve ser adicionada via HTML/JS para funcionar corretamente */
 .project-value {
     color: #111;
     font-weight: 350;
@@ -87,7 +81,7 @@
     font-size: 1rem;
 }
 
-/* === Formulário de rastreio === */
+/* Formulário de rastreio */
 .form-section {
     margin-top: 30px;
     display: flex;
@@ -105,7 +99,6 @@
 .form-section input:focus {
     border-color: #2e7d32;
     outline: none;
-    /* Adiciona box-shadow ao focar */
     box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3);
 }
 
@@ -125,7 +118,7 @@
     background-color: #2e7d32;
 }
 
-/* === Resultado do status === */
+/* Resultado do status */
 #resultadoStatus {
     margin-top: 30px;
 }
@@ -136,37 +129,32 @@
     margin-top: 15px;
     border-radius: 8px;
     background-color: #f5f5f5;
-    /* Faz o texto normal (os valores do status) ficar DOURADO #AD9C70 */
     color: #111;
 }
 
-/* Rótulos de status (Fase Atual, Previsão) - #2e7d32 */
+/* Rótulos de status (Fase Atual, Previsão) */
 .status-box strong {
     color: #000;
-    /* Cor de rótulo (Fase Atual:, Previsão de Entrega:) */
 }
 
-/* === Legenda da Timeline === */
+/* Legenda da Timeline */
 .timeline-legend {
     margin: 20px 0 10px;
     padding: 10px;
-    /* REMOVIDO: Linha pontilhada (border: 1px dashed #ccc;) */
     border: none;
     border-radius: 8px;
     background-color: #fcfcfc;
     font-size: 1rem;
-    /* Cor base para o texto da legenda ser preto */
     color: #000;
 }
 
-/* Título da legenda (Legenda das Fases do Projeto) - #000 (Preto) */
+/* Título da legenda (Legenda das Fases do Projeto) */
 .timeline-legend h4 {
     margin-bottom: 12px;
     color: #000;
-    /* Preto */
 }
 
-/* Lista para a legenda - Remove estilo de lista e aplica espaçamento */
+/* Lista para a legenda */
 .project-legend-list {
     list-style: none;
     padding: 0;
@@ -178,7 +166,6 @@
 }
 
 .legend-item {
-    /* Garante que o texto da legenda seja preto, sobrescrevendo herança */
     color: #000;
     display: flex;
     align-items: center;
@@ -196,7 +183,7 @@
     flex-shrink: 0;
 }
 
-/* CLASSES DE COR ESPECÍFICAS PARA AS 8 FASES DO SEU GRÁFICO */
+/* Classes de cores específicas para as 8 fases do Gráfico */
 .indicator-fase-1 {
     background-color: #c62828;
 }
@@ -230,7 +217,7 @@
 }
 
 
-/* CLASSES DE COR ANTIGAS */
+/* CLASSES DE COR */
 .indicator-complete {
     background-color: #2e7d32;
 }
@@ -243,7 +230,7 @@
     background-color: #ccc;
 }
 
-/* === SVG timeline wrapper === */
+/* SVG timeline wrapper */
 .svg-timeline-wrapper {
     display: block;
     margin-top: 18px;
@@ -265,7 +252,7 @@
     transform-origin: center;
 }
 
-/* REMOÇÃO DA ANIMAÇÃO/ZOOM AO PASSAR O MOUSE */
+/* Remoção da Animação/Zoom ao passar o Mouse */
 .svg-timeline .arc-path:hover {
     transform: none;
     filter: none;
@@ -292,13 +279,12 @@
 .detalhes-status {
     font-style: italic;
     color: #555;
-    /* MARGEM AJUSTADA para afastar da legenda */
     margin-top: 35px;
     border-left: 5px solid #2e7d32;
     padding-left: 10px;
 }
 
-/* === Footer === */
+/* Footer */
 .footer {
     background-color: #000;
     color: #ffffff;
@@ -308,7 +294,7 @@
     border-top: 4px solid #2e7d32;
 }
 
-/* ===== Mobile tweaks ===== */
+/* Mobile */
 @media (max-width: 480px) {
     .container {
         padding: 20px;
@@ -327,7 +313,6 @@
         font-size: 0.95rem;
     }
 
-    /* Reverte o tamanho da fonte da legenda para mobile */
     .svg-timeline .arc-perc {
         font-size: 10px;
     }
@@ -342,25 +327,20 @@
 
     .timeline-legend h4 {
         margin-bottom: 8px;
-        /* Ajuste menor no mobile */
     }
 
     .project-legend-list {
         gap: 10px 20px;
-        /* Espaçamento menor no mobile */
         justify-content: flex-start;
     }
 
     .legend-item {
         flex: 1 1 100%;
-        /* Um item por linha no mobile */
         font-size: 0.9rem;
         color: #000;
-        /* Garante que fique preto no mobile */
     }
 
     .detalhes-status {
         margin-top: 25px;
-        /* Ajuste menor no mobile */
     }
 }

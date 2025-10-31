@@ -22,7 +22,7 @@ body {
     zoom: 90%;
 }
 
-/* ==================== ESTRUTURA ==================== */
+/* ESTRUTURA */
 .wrap {
     min-height: 100vh;
     display: flex;
@@ -41,7 +41,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* ==================== CABEÇALHO ==================== */
+/* CABEÇALHO */
 header {
     display: flex;
     align-items: center;
@@ -78,13 +78,13 @@ header p.muted {
     color: #ffffff;
 }
 
-/* ==================== CONTEÚDO ==================== */
+/* CONTEÚDO */
 main {
     padding: 24px;
     line-height: 1.7;
 }
 
-/* Títulos das seções (números e texto em verde-claro) */
+/* Títulos das seções */
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -99,7 +99,7 @@ p {
     color: var(--preto);
 }
 
-/* Parágrafo inicial (muted no HTML) */
+/* Parágrafo inicial */
 main>p.muted {
     color: var(--preto);
 }
@@ -130,7 +130,7 @@ a[href^="mailto:"] {
     color: var(--verde-claro);
 }
 
-/* ==================== TOC ==================== */
+/* TOC */
 .toc {
     display: flex;
     flex-wrap: wrap;
@@ -154,7 +154,7 @@ a[href^="mailto:"] {
     background: rgba(27, 94, 32, 0.1);
 }
 
-/* ==================== RODAPÉ ==================== */
+/* RODAPÉ */
 footer {
     padding: 16px var(--pad);
     border-top: 1px solid var(--preto);
@@ -174,7 +174,7 @@ footer .muted {
     gap: 8px;
 }
 
-/* ==================== BOTÕES ==================== */
+/* BOTÕES*/
 .btn {
     border: none;
     padding: 10px 16px;
@@ -206,7 +206,7 @@ footer .muted {
     border-color: var(--verde-escuro);
 }
 
-/* ==================== RESPONSIVO ==================== */
+/* RESPONSIVO */
 @media (max-width: 520px) {
     .card {
         border-radius: 10px;

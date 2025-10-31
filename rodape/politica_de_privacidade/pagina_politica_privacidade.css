@@ -84,7 +84,7 @@ main {
     line-height: 1.7;
 }
 
-/* Títulos das seções (números e texto em verde-claro) */
+/* Títulos das seções */
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -99,7 +99,7 @@ p {
     color: var(--preto);
 }
 
-/* Parágrafo inicial (muted no HTML) */
+/* Parágrafo inicial */
 main>p.muted {
     color: var(--preto);
 }

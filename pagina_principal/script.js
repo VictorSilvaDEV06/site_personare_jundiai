@@ -1,4 +1,4 @@
-// ====== ELEMENTOS DO DOM ======
+// ELEMENTOS DO DOM
 const modal = document.getElementById("modal");
 const closeBtn = document.querySelector(".close");
 const cartModal = document.getElementById("cart-modal");
@@ -12,7 +12,7 @@ const suggestionsList = document.getElementById("suggestions");
 // Itens de todos os Dropdowns
 const dropdownLinks = document.querySelectorAll('.dropdown-content a');
 
-// ====== DADOS ======
+// DADOS
 const ambientes = [
     { id: 1, nome: "Cozinha Planejada", descricao: "Cozinha premium feita sob medida, com acabamento sofisticado e máximo aproveitamento do espaço.", imagem: "https://source.unsplash.com/600x400/?kitchen,modern" },
     { id: 2, nome: "Sala de Estar", descricao: "Ambiente moderno e acolhedor, perfeito para reunir família e amigos com estilo.", imagem: "https://source.unsplash.com/600x400/?livingroom,interior" },
@@ -27,7 +27,7 @@ const searchTerms = [
     "Armários de Cozinha", "Guarda-roupas", "Painéis de TV", "Escrivaninhas", "Móveis para Banheiro",
     "Dormitórios", "Cozinhas", "Home Offices", "Home Theaters", "Adegas", "Painéis", "Lavanderias",
     "Espaço Gourmet", "Banheiros", "Closets", "Estantes", "Portas", "Sala de Estar",
-    // Corporativos (NOVOS TERMOS ADICIONADOS PARA A LUPA)
+    // Corporativos
     "Escritórios Executivos", "Salas de Reunião", "Recepções", "Consultórios Médicos", "Lojas e Varejo",
     "Cozinhas Industriais", "Móveis para Escritório", "Projetos Comerciais",
     // Termos Genéricos
@@ -48,9 +48,8 @@ const synonyms = {
     "modulado": ["Móvel modulado", "Móveis modulares"]
 };
 
-// =======================================================
-// FUNÇÕES DE BUSCA E LÓGICA DO DROPDOWN (ALTERADAS)
-// =======================================================
+
+// FUNÇÕES DE BUSCA E LÓGICA DO DROPDOWN
 
 /**
  * Função principal que simula a busca ou redirecionamento.
@@ -81,11 +80,10 @@ function testarBusca(e, query, categoria = null) {
 
     console.log(message);
     alert(message + "\n(Função de busca real será implementada na próxima fase, após o DB)");
-    // Lógica futura para redirecionamento ou filtro Ajax viria aqui.
 }
 
 
-// NOVO: LÓGICA UNIFICADA PARA CAPTURAR O CLIQUE DO DROPDOWN E CATEGORIA
+// LÓGICA UNIFICADA PARA CAPTURAR O CLIQUE DO DROPDOWN E CATEGORIA
 dropdownLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -106,13 +104,12 @@ dropdownLinks.forEach(link => {
             testarBusca(e, ambiente, categoria);
 
             // Opcional: Fechar o dropdown após o clique
-            // suggestionsList.style.display = "none";
         }
     });
 });
 
 
-// ====== SUGESTÕES (mantidas) ======
+// SUGESTÕES
 function filtrarSugestoes(query) {
     const termosEncontrados = [];
     searchTerms.forEach(term => {
@@ -152,7 +149,7 @@ function mostrarSugestoes() {
     suggestionsList.style.display = "block";
 }
 
-// ====== MODAIS (mantidos) ======
+// MODAIS
 function abrirModal(id) {
     const produto = ambientes.find(p => p.id === id);
     if (!produto) return;
@@ -169,7 +166,7 @@ function addToCart(productId) { /* Lógica do carrinho aqui */ }
 function updateCartCount() { /* Lógica de atualização aqui */ }
 function openCartModal() { /* Lógica do modal aqui */ }
 
-// ====== EVENT LISTENERS ======
+// EVENT LISTENERS
 searchInput.addEventListener("input", mostrarSugestoes);
 
 // Clique na lupa

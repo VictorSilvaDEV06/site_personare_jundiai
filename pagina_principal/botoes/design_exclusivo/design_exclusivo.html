@@ -75,7 +75,7 @@
 
     <script>
         const imagensProjetos = {
-            // COZINHA: 5 posições e CAMINHO CORRIGIDO (3x '../')
+            // COZINHA: 5 posições
             cozinha: [
                 '../../../imagens/area_gourmet/projeto_cozinha_azul (1).jpeg', // Imagem 1: (Capa)
                 '../../../imagens/area_gourmet/projeto_cozinha_azul (2).jpeg', // Imagem 2:
@@ -83,7 +83,7 @@
                 '../../../imagens/area_gourmet/projeto_cozinha_azul (4).jpeg', // Imagem 4:
                 '../../../imagens/area_gourmet/projeto_cozinha_azul (5).jpeg'  // Imagem 5:
             ],
-            // QUARTO: CAMINHO CORRIGIDO (3x '../'). Preencher com os nomes exatos!
+            // QUARTO:
             quarto: [
                 '../../../imagens/quarto_planejado/quarto_planejado.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 2.jpeg',
@@ -95,7 +95,7 @@
                 '../../../imagens/quarto_planejado/quarto_planejado 8.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 9.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 10.jpeg',
-                '../../../imagens/quarto_planejado/quarto_planejado 11.jpeg', 
+                '../../../imagens/quarto_planejado/quarto_planejado 11.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 12.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 13.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 14.jpeg',
@@ -104,7 +104,7 @@
                 '../../../imagens/quarto_planejado/quarto_planejado 17.jpeg',
                 '../../../imagens/quarto_planejado/quarto_planejado 18.jpeg',
             ],
-            // SALA: CAMINHO CORRIGIDO (3x '../'). Preencher com os nomes exatos!
+            // SALA:
             sala: [
                 '../../../imagens/sala_planejada/sala_planejada.jpeg',
                 '../../../imagens/sala_planejada/sala_planejada 2.jpeg',
@@ -121,9 +121,8 @@
         let projetoAtual = '';
         let indiceImagem = 0;
 
-        // NOVO: Função para lidar com a navegação do teclado
+        // Função para lidar com a navegação do teclado
         function navegarTeclado(event) {
-            // Verifica se o modal está aberto (apenas para garantir)
             if (document.getElementById('modalCarrossel').style.display !== 'flex') {
                 return;
             }
@@ -148,20 +147,20 @@
             document.getElementById('imagemCarrossel').src = imagensProjetos[projeto][indiceImagem];
             document.getElementById('modalCarrossel').style.display = 'flex';
 
-            // CORREÇÃO DO SCROLL: Impede o scroll no corpo da página (fundo)
+            // Impede o scroll no corpo da página (fundo)
             document.body.style.overflow = 'hidden';
 
-            // NOVO: Adiciona o listener para detectar as teclas
+            // Adiciona o listener para detectar as teclas
             document.addEventListener('keydown', navegarTeclado);
         }
 
         function fecharCarrossel() {
             document.getElementById('modalCarrossel').style.display = 'none';
 
-            // CORREÇÃO DO SCROLL: Restaura o scroll no corpo da página
+            // Restaura o scroll no corpo da página
             document.body.style.overflow = 'auto';
 
-            // NOVO: Remove o listener do teclado (boa prática)
+            // Remove o listener do teclado
             document.removeEventListener('keydown', navegarTeclado);
         }
 
